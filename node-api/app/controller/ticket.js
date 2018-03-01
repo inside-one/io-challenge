@@ -8,7 +8,7 @@ exports.index = function(data) {
 		.exec((err, tickets) => {
 				if (err) return reject({ code: 500, error: err });
 
-				resolve(response)
+				resolve(tickets)
 		});
 	});
 };
@@ -16,9 +16,9 @@ exports.index = function(data) {
 
 exports.create = function(data) {
 	return Q.Promise(function(resolve, reject) {
-		Task.create(data.body, (err, task) => {
+		Ticket.create(data.body, (err, ticket) => {
 			if (err) return reject({ code: 500, error: err });
-			resolve(task.toJSON());
+			resolve(ticket.toJSON());
 		});
 	});
 }

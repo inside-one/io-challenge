@@ -16,9 +16,9 @@ app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGO_DB)
 .then(()=> console.log("Conected DB!"))
-.catch((err) => console.log("Error to connect to DB :( "))
+.catch((err) => console.error(err, "Error to connect to DB :( "))
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Credentials", true);
