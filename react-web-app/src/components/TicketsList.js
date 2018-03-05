@@ -45,6 +45,10 @@ const TicketsList = (props) =>{
                 )
             }
             </div>
+        : props.tickets.status === 'TICKETS_LOAD_ERROR' ?
+        <div>
+            Error: no se pudo cargar los tickets
+        </div>
         : <div></div>            
     )
 }
