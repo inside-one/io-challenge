@@ -7,7 +7,7 @@ const TicketSchema = new mongoose.Schema({
 
     description:  { type: String, required: true },
 
-    coords : [{ type: String, required: true }],
+    coords : [{ type: Number, required: true }],
 
     code : { type: Number, required: true },
 
