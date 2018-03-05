@@ -16,9 +16,19 @@ exports.index = function(data) {
 
 exports.create = function(data) {
 	return Q.Promise(function(resolve, reject) {
-		Ticket.create(data.body, (err, ticket) => {
-			if (err) return reject({ code: 500, error: err });
-			resolve(ticket.toJSON());
-		});
+		Ticket.findOne().sort('-createdOn').exec((error, lastTicket) =>{
+			if(error) return reject({ code: 404, error })
+
+			let code =  lastTicket ? lastTicket.code + 1 : 1;
+
+			let payload = Object.assign(data.body, {code})
+
+			Ticket.create(payload, (err, ticket) => {
+				if (err) return reject({ code: 500, error: err });
+				resolve(ticket.toJSON());
+			}); 
+
+
+		})
 	});
 }
