@@ -10,6 +10,9 @@ const actionHandlers = {
   }),
   "TICKETS_LOADED": (action) => ({
     all: action.payload
+  }),
+  "TICKETS_LOAD_ERROR": (action) => ({
+    all: action.payload
   })
 }
 
