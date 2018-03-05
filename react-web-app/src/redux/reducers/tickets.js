@@ -1,21 +1,36 @@
 const initialState = {
-    all : null,
-    current: null,
-    status: 'INIT'
-  }
+  all : null,
+  current: null,
+  status: 'INIT'
+}
+
+const actionHandlers = {
+  "TICKETS_LOADING": (action) => ({
+    all: action.payload
+  }),
+  "TICKETS_LOADED": (action) => ({
+    all: action.payload
+  })
+}
+
+export default (state = initialState, action = {}) => {
   
-  export default (state = initialState, action = {}) => {
-    switch (action.type) {
-      
-      case "SET_TICKETS":
-      return {
-          ...state,
-          all : action.payload,
-          status : action.type
-      };
-  
-      default:
-        return state;
+  const handler = actionHandlers[action.type];
+
+  const newState = handler ? Object.assign(
+    {},
+    state,
+    handler(action),
+    {
+      status: action.type
     }
-  }
+  )
+    : state;
+
+  console.log('================TICKET STORE====================');
+  console.log(newState);
+  console.log('=================REDUX===================');
+
+  return newState;
+}
   

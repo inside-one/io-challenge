@@ -3,52 +3,33 @@ body {
   margin: 0;
   overflow: hidden;
 
-  --primary: #5c6f7b;
-  --primaryText: #565656;
+  --primaryText: #494949;
   --secondary: #8d9aa3;
-  --green : #00ab9d;
-  --red: #ff5f66;
-  --orange : #f15c22;
   --cian : #00b5cc;
-  --light : #d2e3ef;
+  --light : #e7edf4;
+  
 }
 
 @font-face {
-  font-family: 'Avenir';
-  src:url('./assets/avenir/Avenir-Roman.eot?#iefix') format('embedded-opentype'),
-  url('./assets/avenir/Avenir-Roman.woff') format('woff'),
-  url('./assets/avenir/Avenir-Roman.ttf') format('truetype'),
-  url('./assets/avenir/Avenir-Roman.svg#linecons') format('svg');
-  font-weight: 200;
+  font-family: 'Lato-Heavy';
+  src: url('assets/lato/Lato-Heavy.eot');
+  src: url('assets/lato/Lato-Heavy.eot?#iefix') format('embedded-opentype'),
+       url('assets/lato/Lato-Heavy.woff2') format('woff2'),
+       url('assets/lato/Lato-Heavy.woff') format('woff'),
+       url('assets/lato/Lato-Heavy.ttf') format('truetype');
   font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
 }
 
 @font-face {
-  font-family: 'Avenir';
-  src:url('./assets/avenir/Avenir-Medium.eot?#iefix') format('embedded-opentype'),
-  url('./assets/avenir/Avenir-Medium.woff') format('woff'),
-  url('./assets/avenir/Avenir-Medium.ttf') format('truetype'),
-  url('./assets/avenir/Avenir-Medium.svg#linecons') format('svg');
-  font-weight: 400;
+  font-family: 'Lato-Medium';
+  src: url('assets/lato/Lato-Medium.eot');
+  src: url('assets/lato/Lato-Medium.eot?#iefix') format('embedded-opentype'),
+       url('assets/lato/Lato-Medium.woff2') format('woff2'),
+       url('assets/lato/Lato-Medium.woff') format('woff'),
+       url('assets/lato/Lato-Medium.ttf') format('truetype');
   font-style: normal;
-}
-
-@font-face {
-  font-family: 'Avenir';
-  src:url('./assets/avenir/Avenir-Heavy.eot?#iefix') format('embedded-opentype'),
-  url('./assets/avenir/Avenir-Heavy.woff') format('woff'),
-  url('./assets/avenir/Avenir-Heavy.ttf') format('truetype'),
-  url('./assets/avenir/Avenir-Heavy.svg#linecons') format('svg');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Avenir';
-  src:url('./assets/avenir/Avenir-Black.eot?#iefix') format('embedded-opentype'),
-  url('./assets/avenir/Avenir-Black.woff') format('woff'),
-  url('./assets/avenir/Avenir-Black.ttf') format('truetype'),
-  url('./assets/avenir/Avenir-Black.svg#linecons') format('svg');
-  font-weight: 900;
-  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
 }
