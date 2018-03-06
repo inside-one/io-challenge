@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { browserHistory } from 'react-router';
+import { MapContainer } from '..';
 
-import { Container } from '../../components';
+import { Container, TicketsList } from '../../components';
+
+import { fetchTickets } from '../../redux/actions/tickets'
 
 import './style.css'
 
@@ -18,18 +20,26 @@ class Dashboard extends Component {
     }
 
     componentDidMount(){
-        
-        console.log('================TICKET STORE====================');
-        console.log(this.props.tickets);
-        console.log('=================REDUX===================');
+
+        this.dispatch(fetchTickets())
 
     }
 
     render(){
         return(
             <Container extraClass="dashboard">
-                <h1>DASHBOARD</h1>
-                <h3>Tickets Store: { JSON.stringify(this.props.tickets) }</h3>
+                <div className="tickets-box">
+                    <div className="title">
+                        Tickets
+                    </div>
+                    <div className="title-line" />
+                
+                    <TicketsList tickets={this.props.tickets} />
+                
+                </div>
+                <div className="map">
+                    <MapContainer />
+                </div>
             </Container>
         )
     }
