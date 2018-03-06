@@ -2,32 +2,16 @@
 
 ### Introduction
 
-This API is developed in nodejs + express and mongodb.
-
-### Folder Distribution
-```json
-package.json
-app.js
-app/
-    controller/
-        ticket.js
-    model/
-        ticket.js
-    routes/
-        index.js
-        ticket/
-            index.js
-            methods.js
-```
+This API is developed in NodeJS + Express and Mongodb.
 ### Ticket Model
 
 ```json
 {
-    title : { type: String, required: true },
-    description:  { type: String, required: true },
-    coords : [{ type: Number, required: true }],
-    code : { type: Number, required: true },
-    createdOn : { type: Date, default: Date.now }
+    "title" : "{ type: String, required: true }",
+    "description":  "{ type: String, required: true }",
+    "coords" : "[{ type: Number, required: true }]",
+    "code" : "{ type: Number, required: true }",
+    "createdOn" : "{ type: Date, default: Date.now }"
 }
 ```
 
@@ -102,11 +86,7 @@ Then, when the dependecies were install you need to rename the `sample.env`  => 
 
 `npm run dev` or `npm start`
 
-When the app it's running, you will see a message like this.
-
-====================================
-App is running on:  8080
-====================================
+Let's Go to Code!
 
 
 
