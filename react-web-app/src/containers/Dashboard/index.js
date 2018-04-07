@@ -26,6 +26,7 @@ class Dashboard extends Component {
     }
 
     render(){
+        var tickets = this.props.tickets;
         return(
             <Container extraClass="dashboard">
                 <div className="tickets-box">
@@ -34,11 +35,11 @@ class Dashboard extends Component {
                     </div>
                     <div className="title-line" />
                 
-                    <TicketsList tickets={this.props.tickets} />
+                    <TicketsList tickets={tickets} />
                 
                 </div>
                 <div className="map">
-                    <MapContainer />
+                    <MapContainer tickets={tickets}/>
                 </div>
             </Container>
         )
